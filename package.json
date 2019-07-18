@@ -1,0 +1,15 @@
+{
+  "name": "Browser-options-crawler",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon --exec sucrase-node src/index.ts",
+    "build": "sucrase src -d dist --transforms typescript,imports",
+    "start": "rm -rf ./dist && sucrase ./src -d ./dist --transforms typescript,imports && node ./dist/index.js",
+    "pm2": "pm2 start ./dist/index.js --name Nexledger-Backend"
+  },
+  "repository": "https://github.com/Cellularhacker/Browser-options-crawler.git",
+  "author": "Jeffrey Lee <jeffrey@wizpace.com>",
+  "license": "GNU General Public License v3.0",
+  "private": true
+}
